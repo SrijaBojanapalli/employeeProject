@@ -1,0 +1,78 @@
+ <div class="row">
+  <div class="col s8 offset s2">
+    <div class="card">
+      <div class="sm-jumbotron center-align">
+        <h2>User Registration</h2>
+      </div> 
+      
+      <!-- <form class="col s12 white" #userRegistrationForm="ngForm" >  -->
+         <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="_id" #_id [(ngModel)]="user._id">
+            <label>EmployeeId</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="name" #name [(ngModel)]="user.name">
+            <label>EmployeeName</label>
+
+          </div>
+          <div class="input-field col s12">
+              <input type="text" name="password" #name [(ngModel)]="user.password">
+              <label>Password</label>
+  
+            </div>
+          <div class="input-field col s12">
+            <input type="text" name="email" #email [(ngModel)]="user.email">
+            <label>EmailId</label>
+
+          </div>
+          <div class="input-field col s6">
+            <input type="datetime" name="birthday" #birthday [(ngModel)]="user.birthday">
+            <label>BirthdayDate</label>
+
+          </div>
+          <div class="input-field col s6">
+            <input type="datetime" name="joiningDay" #joiningDay [(ngModel)]="user.joiningDay">
+            <label>JoiningDay</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="gender" #gender [(ngModel)]="user.gender">
+            <label>Gender</label>
+
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="martialStatus" #martialStatus [(ngModel)]="user.martialStatus">
+            <label>MartialStatus</label>
+          </div>
+          <div class="input-field col s6">
+              <input type="text" name="designation" #designation [(ngModel)]="user.designation">
+              <label>Designation</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="text" name="qualification" #qualification [(ngModel)]="user.qualification">
+                <label>Qualification</label>
+              </div>
+          <br>
+
+          <div>
+            <label>empAddress</label>
+            <textarea rows="4" cols="0"  #address [(ngModel)]="user.empAddress">
+          
+            </textarea>
+          </div>
+          
+
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+             <button class="btn-large btn-submit" type="submit" (click) = "employee()">Register</button> 
+          </div>
+        </div> 
+       
+       <!-- </form>  -->
+
+
+     </div>
+
+  </div>
+</div> 
