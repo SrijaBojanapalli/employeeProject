@@ -13,7 +13,7 @@ export class User {
     joiningDay:any;
     maritalStatus:string;
     employeeType:string;
-    empAddress:EmpAddress;
+    empAddress:any;
     designation:string;
     qualification:string;
 }

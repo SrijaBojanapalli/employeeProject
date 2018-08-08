@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../shared/user';
 import { NgForm } from '@angular/forms';
 import { AppService } from '../app.service';
+import { EmpAddress } from '../emp-address';
 
 
 
@@ -15,7 +16,10 @@ import { AppService } from '../app.service';
 export class SignUpComponent implements OnInit {
   url: string="http://192.168.2.57:8082/EmployeeDetails/account/registration";
   user:User = new User();
-constructor(private appService:AppService){}
+constructor(private appService:AppService){
+  this.user.empAddress = new EmpAddress();
+
+}
   ngOnInit() {
     this.employee();
   }
