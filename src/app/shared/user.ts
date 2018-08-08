@@ -3,6 +3,7 @@ import { EmpAddress } from "../emp-address";
 
 export class User {
     _id:string;
+    empId:number;
     name:string;
     gender:string;
     mobileNo:number;
@@ -10,9 +11,9 @@ export class User {
     password:string;
     birthday:any;
     joiningDay:any;
-    martialStatus:string;
+    maritalStatus:string;
     employeeType:string;
-    empaddress:EmpAddress;
+    empAddress:EmpAddress;
     designation:string;
     qualification:string;
 }

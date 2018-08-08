@@ -1,0 +1,62 @@
+
+.container {
+  padding: 25px;
+  position: fixed;
+}
+
+.form-login {
+  background-color: #EDEDED;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  border-color:#d2d2d2;
+  border-width: 5px;
+  box-shadow:0 1px 0 #cfcfcf;
+}
+
+h4 { 
+border:0 solid #fff; 
+border-bottom-width:1px;
+padding-bottom:10px;
+text-align: center;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.wrapper {
+  text-align: center;
+}
+*/
+.middleClass{
+  margin-top: 200px;
+}
+.spaceClass{
+  margin-bottom: 30px;
+}
+.registrationClass{
+      float: right;
+      margin-right: 96px;
+      background: #55d6ac;
+      color: white;
+      width: 233px;
+      height: 35px;
+}
+.loginClass{
+      margin-left: 14px;
+      background: #55d6ac;
+      color: white;
+      width: 233px;
+      height: 35px;
+}
+.imgClass{
+  width: 110px;
+  margin-left: 476px;
+  margin-bottom: 16px;
+}
+.userClass{
+  border: 1px solid #6ac9fc;
+}

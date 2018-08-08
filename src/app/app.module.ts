@@ -10,21 +10,24 @@ import {UserService} from './shared/user.service';
 import { AppService } from './app.service';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeRegistrationComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    
-   BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
