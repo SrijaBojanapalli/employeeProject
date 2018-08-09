@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../shared/user';
+import { User } from '../shared/user';
 import { Http } from '@angular/http';
-import {Router} from '@angular/router';
-import { AppService } from '../app.service';;
+import { Router } from '@angular/router';
+import { AppService } from '../app.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -10,28 +11,53 @@ import { AppService } from '../app.service';;
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  url: string="";
-  userDetails :User = new User;
+  url: string = "";
+  //disabled: boolean = true;
+  name:string;
+  is_edit : boolean = false;
+  updateUserDetails: User = new User();
 
-  constructor(private http:Http,private appService:AppService) { }
+  userDetails = this.appService.userDetails;
+
+  constructor(private http: Http, private appService: AppService) {
+
+
+  }
 
   ngOnInit() {
+    console.log('Inside Profile inside ngOnIt');
+    console.log(this.appService.userDetails);
   }
-  getEmp(){
 
-    this.http.get("url?empId="+this.appService.userEmpId.empId+"").subscribe(response => {
-      console.log(response.json());
-    
-      this.userDetails.empId=response.json().empId;
-      
+  edit() :
+    boolean{
+      return this.is_edit;
+    }
+  
+
+  update() {
+    console.log("" + JSON.stringify(this.updateUserDetails));
+    var resp = this.appService.getDataFromServer(this.updateUserDetails);
+    console.log("resp--->" + JSON.stringify(resp));
+  }
+
+
+  //getEmp(){
+
+
+  //this.http.get("url?empId="+this.appService.userEmpId.empId+"").subscribe(response => {
+  //console.log(response.json());
+
+  //this.userDetails=response.json();
 
 
 
-      console.log(response);
 
-     
-     
-    });
+  //console.log(response);
 
-}
+
+
+  //});
+
+  //}
 }

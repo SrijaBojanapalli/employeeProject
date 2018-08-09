@@ -14,7 +14,7 @@ import {ProfileComponent} from './profile/profile.component';
       {
         
           path:"",
-          component:AppComponent
+          component:LoginComponent
         
       },
       {

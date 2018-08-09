@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class UserService {
   
-  
+  empId;
 
   constructor() { }
   

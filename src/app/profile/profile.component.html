@@ -5,72 +5,96 @@
         <h2>Employee Profile</h2>
       </div> 
       
-      <!-- <form class="col s12 white" #userRegistrationForm="ngForm" >  -->
+      <form  > 
          <div class="row">
+            <div class="input-field col s6">
+                empid <input type="number" name="empId" #empId [(ngModel)]="userDetails.empId"  [disabled]="isDisabled()" id="name" type="text">
+                
+                </div>
+                
           
           <div class="input-field col s12">
-            <input type="text" name="name" #name [(ngModel)]="user.name">
-            <label>EmployeeName</label>
+              EmployeeName <input type="text" name="name" #name [(ngModel)]="userDetails.name" disabled >
+            
 
           </div>
           <div class="input-field col s12">
-              <input type="text" name="password" #name [(ngModel)]="user.password">
-              <label>Password</label>
+              Password<input type="text" name="password" #name [(ngModel)]="userDetails.password" disabled>
+              
   
             </div>
           <div class="input-field col s12">
-            <input type="text" name="email" #email [(ngModel)]="user.email">
-            <label>EmailId</label>
+              EmailId<input type="text" name="email" #email [(ngModel)]="userDetails.email" disabled>
+            
 
           </div>
           <div class="input-field col s6">
-            <input type="datetime" name="birthday" #birthday [(ngModel)]="user.birthday">
-            <label>BirthdayDate</label>
+              BirthdayDate<input type="datetime" name="birthday" #birthday [(ngModel)]="userDetails.birthday" disabled> 
+            
           </div>
           <div class="input-field col s6">
-            <input type="datetime" name="joiningDay" #joiningDay [(ngModel)]="user.joiningDay">
-            <label>JoiningDay</label>
+              JoiningDay <input type="datetime" name="joiningDay" #joiningDay [(ngModel)]="userDetails.joiningDay" disabled>
+            
           </div>
           <div class="input-field col s6">
-            <input type="text" name="gender" #gender [(ngModel)]="user.gender">
-            <label>Gender</label>
+              Gender<input type="text" name="gender" #gender [(ngModel)]="userDetails.gender" disabled> 
+            <label></label>
 
           </div>
           <div class="input-field col s6">
-            <input type="text" name="martialStatus" #martialStatus [(ngModel)]="user.martialStatus">
-            <label>MartialStatus</label>
+              MaritalStatus <input type="text" name="maritalStatus" #martialStatus [(ngModel)]="userDetails.marialStatus" disabled>
+            
           </div>
           <div class="input-field col s6">
-              <input type="text" name="designation" #designation [(ngModel)]="user.designation">
-              <label>Designation</label>
+              Designation<input type="text" name="designation" #designation [(ngModel)]="userDetails.designation" disabled>
+              
             </div>
             <div class="input-field col s6">
-                <input type="text" name="qualification" #qualification [(ngModel)]="user.qualification">
-                <label>Qualification</label>
+                Qualification<input type="text" name="qualification" #qualification [(ngModel)]="userDetails.qualification" disabled>
+                
               </div>
+              <div class="input-field col s6">
+                  mobileNo<input type="text" name="mobileNo" #qualification [(ngModel)]="userDetails.mobileNo" disabled>
+                  
+                </div>
           <br>
 
           <div>
-            <label>empAddress</label>
-            <textarea rows="4" cols="0"  #address [(ngModel)]="user.empAddress">
-          
-            </textarea>
+            <table>
+              <tr>
+                <td>
+                  address<input type="text" name="address" #address [(ngModel)]="userDetails.empAddress.address" disabled>
+                  </td>
+              </tr>
+              </table>
+            </div>
+            <div>
+              <table>
+              <tr>
+                  
+                <td>latitude
+                  <input type="number" name="latitude" #latitude [(ngModel)]="userDetails.empAddress.latitude">
+                
+                </td>
+                
+                <td>
+                    longitude<input type="number" name="longitude" #longitude [(ngModel)]="userDetails.empAddress.longitude">
+                
+                </td>
+              </tr>
+
+            </table>
           </div>
           
 
         </div>
-        <div class="row">
-          <div class="input-field col s6">
-             <button class="btn-large btn-submit" type="submit" (click) = "edit()">Register</button> 
-          </div>
-        </div> 
-        <div class="row">
-          <div class="input-field col s6">
-             <button class="btn-large btn-submit" type="submit" (click) = "update()">Register</button> 
+                <div class="row">
+          <div class="input-field col s12">
+             <button class="btn-large btn-submit" type="submit" ng-click="edit();update()">update</button> 
           </div>
         </div> 
        
-       <!-- </form>  -->
+       </form>  
 
 
      </div>

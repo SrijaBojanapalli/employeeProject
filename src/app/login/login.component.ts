@@ -24,6 +24,10 @@ export class LoginComponent implements OnInit {
       console.log("Registration clicked");
       this.router.navigate(['signup']);
     }
+    print(e,p){
+      console.log(e);
+      console.log(p);
+    }
   }
 
 

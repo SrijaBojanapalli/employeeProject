@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { EmployeeRegistrationComponent } from './employee-registration/employee-registration.component';
@@ -11,7 +12,12 @@ import { AppService } from './app.service';
 import { HttpModule } from '@angular/http';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -19,7 +25,9 @@ import { AppRoutingModule } from './/app-routing.module';
     EmployeeRegistrationComponent,
     SignUpComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    EmployeeDetailsComponent,
+  
     
   ],
   imports: [
@@ -28,6 +36,7 @@ import { AppRoutingModule } from './/app-routing.module';
     HttpModule,
     BrowserAnimationsModule,
     AppRoutingModule
+    
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
